@@ -1,0 +1,24 @@
+{
+  "name": "stitch-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dataSource.js",
+  "dependencies": {
+    "apollo-datasource-rest": "0.3.0",
+    "apollo-link-http": "1.5.11",
+    "apollo-server": "2.4.0",
+    "apollo-server-express": "2.4.0",
+    "body-parser": "1.18.3",
+    "express": "4.16.4",
+    "graphql": "14.1.1",
+    "graphql-tools": "4.0.4",
+    "node-fetch": "2.3.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,36 @@
+.App {
+    display: flex;
+}
+
+h2{
+    text-align: center;
+}
+
+.routes{
+    width: 200px;
+    list-style: none;
+}
+li{
+    margin-bottom: 20px;
+}
+.routes a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 700;
+}
+
+.active{
+    text-decoration: underline!important;
+    color: blue!important;
+}
+
+button{
+    text-align: center;
+    padding: 15px 20px;
+    background: #61dafb;
+    font-size: 16px;
+    font-weight: 700;
+    border: none;
+    border-radius: 20px;
+    margin-bottom: 25px;
+}

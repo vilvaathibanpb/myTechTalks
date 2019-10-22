@@ -1,0 +1,33 @@
+.p-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid;
+    margin-bottom: 30px;
+    padding: 30px 50px;
+}
+.profile-pic{
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+}
+.name{
+    font-size: 20px;
+    font-weight: 700;
+}
+.count{
+    font-size: 30px;
+    font-weight: 700;
+}
+.flag{
+    height: 50px;
+    width: 50px;
+}
+
+.vote-btn{
+    font-size: 24px;
+    color: #fff;
+    background: #ef494f;
+    padding: 10px 30px;
+    cursor: pointer;
+}

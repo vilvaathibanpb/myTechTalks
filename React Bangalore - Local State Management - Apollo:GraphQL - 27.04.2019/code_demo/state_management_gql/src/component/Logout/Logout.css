@@ -1,0 +1,13 @@
+.logout-container{
+    position: fixed;
+    top: 5%;
+    right: 5%;
+}
+
+.logout-btn{
+    font-size: 24px;
+    color: #fff;
+    background: rgb(49, 106, 255);
+    padding: 10px 30px;
+    cursor: pointer;
+}

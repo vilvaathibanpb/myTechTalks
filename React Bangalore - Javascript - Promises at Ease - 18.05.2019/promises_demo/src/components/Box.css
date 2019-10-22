@@ -1,0 +1,34 @@
+.box{
+    font-size: 12px;
+    font-weight: 700;
+    height: 75px;
+    width: 100px;
+    padding: 5px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    margin: 5px;
+}
+
+.idle{
+    color: #000;
+    background: #e1e1e1;
+}
+
+.pending{
+    color: #000;
+    background: #ffae42;
+    margin-left: 40%;
+}
+
+.fulfilled{
+    color: #000;
+    background: greenyellow;
+    margin-left: 80%;
+}
+
+.rejected{
+    color: #fff;
+    background: red;
+    margin-left: 80%;
+}
