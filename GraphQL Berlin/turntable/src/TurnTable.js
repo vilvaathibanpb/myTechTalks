@@ -28,7 +28,7 @@ function TurnTable({ source, isPlay, isPause, volumeRange }) {
         audioRef.current.volume = Number(volumeRange);
       }
     }
-  }, [isPlay, isPause, volumeRange]);
+  }, [isPlay, isPause, volumeRange, source]);
 
   const playOrPause = () => {
     if (!audioRef) return;
