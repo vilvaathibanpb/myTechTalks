@@ -1,0 +1,6 @@
+endpoint: https://eu1.prisma.sh/vilva-athiban-p-b-2eb6c4/demo-server/dev
+datamodel: datamodel.prisma
+
+generate:
+  - generator: javascript-client
+    output: ./generated/prisma-client/

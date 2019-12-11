@@ -1,0 +1,7 @@
+type PlaybackControl {
+  id: Int! @id
+  sourceIndex: Int
+  isPlay: Boolean
+  isPause: Boolean
+  volumeRange: String
+}
