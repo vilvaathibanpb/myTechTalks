@@ -6,10 +6,10 @@ import { getMainDefinition } from 'apollo-utilities';
 import { InMemoryCache } from 'apollo-cache-inmemory';
 
 const httpLink = new HttpLink({
-  uri: 'https://eu1.prisma.sh/vilva-athiban-p-b-2eb6c4/hello-world/dev',
+  uri: 'https://eu1.prisma.sh/vilva-athiban-p-b-2eb6c4/demo-server/dev',
 });
 const wsLink = new WebSocketLink({
-  uri: 'wss://eu1.prisma.sh/vilva-athiban-p-b-2eb6c4/hello-world/dev',
+  uri: 'wss://eu1.prisma.sh/vilva-athiban-p-b-2eb6c4/demo-server/dev',
   options: {
     reconnect: true
   },
