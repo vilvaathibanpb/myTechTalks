@@ -1,0 +1,109 @@
+.App {
+  text-align: center;
+}
+
+.box {
+  height: 300px;
+  width: 300px;
+  background: #EB605E;
+  margin: 100px;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.play-btn {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background: #A74748;
+  border: 3px solid #2E2323;
+  margin: 10px;
+  margin-top: 50px;
+}
+
+.stop {
+  height: 15px;
+  width: 30px;
+  padding: 3px;
+  font-size: 12px;
+  font-weight: bold;
+  margin: 20px 5px 50px;
+  background: #fff;
+  border: 2px solid #234198;
+  color: red;
+}
+
+.play-image {
+  height: 20px;
+  width: 20px;
+  margin: 5px;
+}
+
+.disc {
+  height: 200px;
+  width: 200px;
+  background: #382B2E;
+  border: 5px solid #E9E4E4;
+  margin-top: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 190px;
+}
+
+@keyframes rotating {
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  to {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.rotating {
+  -webkit-animation: rotating 2s linear infinite;
+  -moz-animation: rotating 2s linear infinite;
+  -ms-animation: rotating 2s linear infinite;
+  -o-animation: rotating 2s linear infinite;
+  animation: rotating 2s linear infinite;
+}
+
+.inner-circle {
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  border: 20px solid;
+  background: #EB605E;
+}
+
+.volume {
+  margin: 5px 0px 5px 5px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.volume img {
+  height: 30px;
+  width: 30px;
+  margin: 10px;
+}
+
+.rod {
+  height: 101px;
+  width: 20px;
+  background: #1D4690;
+  margin: 10px;
+  margin-top: 50px;
+  transform: rotate(45deg);
+}
