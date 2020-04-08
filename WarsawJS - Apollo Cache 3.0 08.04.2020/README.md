@@ -1,0 +1,1 @@
+Link to slides - https://slides.com/vilvaathiban/graphql-rethink-cache-with-apollo-cache-3-0/fullscreen
