@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useLazyQuery, useApolloClient } from "@apollo/react-hooks";
-import { GET_STATIONS } from "./launch.query.graphql";
+import { GET_LAUNCH_OFFSET } from "./launch.query.graphql";
 import JSONPretty from "react-json-pretty";
 import "react-json-pretty/themes/monikai.css";
 import styled from "styled-components";
@@ -30,15 +30,16 @@ const Text = styled.div`
   cursor: pointer;
 `;
 
-const List = () => {
+const ListWithOffset = () => {
   const client = useApolloClient();
-  const [size, setSize] = useState(5);
+  const [offset, setOffset] = useState(0);
   const [dummy, refreshComponent] = useState(false);
   const [executeSearch, { data, loading, error, called }] = useLazyQuery(
-    GET_STATIONS,
+    GET_LAUNCH_OFFSET,
     {
       variables: {
-        limit: size,
+        limit: 5,
+        offset
       },
     }
   );
@@ -46,6 +47,10 @@ const List = () => {
   useEffect(() => {
     executeSearch();
   }, []); // eslint-disable-line
+
+  useEffect(() => {
+    client.cache.gc()
+  }, [data])
 
   const deleteCache = (mission_name) => {
     client.cache.evict(
@@ -69,8 +74,10 @@ const List = () => {
     <Container>
       <div style={{ flex: 1 }}>
         {/* Button Section */}
-        <ButtonContainer setSize={setSize} />
-
+        <Button onClick={() => {
+          client.resetStore();
+          setOffset(offset + 5);
+        }}> Next </Button>
         {/* List */}
         {data &&
           data.launchesPast &&
@@ -94,14 +101,4 @@ const List = () => {
   );
 };
 
-const ButtonContainer = ({ setSize }) => (
-  <Container>
-    <h3>Select Number of Records</h3>
-    <Button onClick={() => setSize(5)}>5</Button>
-    <Button onClick={() => setSize(10)}>10</Button>
-    <Button onClick={() => setSize(15)}>15</Button>
-    <Button onClick={() => setSize(20)}>20</Button>
-  </Container>
-);
-
-export default List;
+export default ListWithOffset;
