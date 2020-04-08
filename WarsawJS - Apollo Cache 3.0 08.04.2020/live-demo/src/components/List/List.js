@@ -34,7 +34,7 @@ const Search = () => {
 
   useEffect(() => {
     executeSearch();
-  }, []);
+  }, []); // eslint-disable-line
 
   const cacheData = window.__APOLLO_CLIENT__.cache.data.data;
   return (
