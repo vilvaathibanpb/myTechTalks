@@ -5,8 +5,8 @@ import ListWithOffset from "./components/ListWithOffset/ListWithOffset";
 function App() {
   return (
     <div>
-      {/* <List /> */}
-      <ListWithOffset />
+      <List />
+      {/* <ListWithOffset /> */}
     </div>
   );
 }
